@@ -677,6 +677,16 @@ figure {
   border-radius: 20px;
 }
 
+@media screen and (max-width: 768px) {
+  #fh5co-project .fh5co-project img {
+
+
+    height: 120px;
+    border-radius: 0px;
+
+  }
+}
+
 #fh5co-project .fh5co-project {
   margin-bottom: 30px;
 }
@@ -697,7 +707,11 @@ figure {
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s;
+
+
 }
+
+
 
 #fh5co-project .fh5co-project>a:after {
   opacity: 0;

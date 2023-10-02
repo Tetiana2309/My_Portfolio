@@ -228,7 +228,7 @@
 
 					</div>
 					<div class="col-md-4 col-sm-6 fh5co-project animate-box" data-animate-effect="fadeIn">
-						<a href="#">
+						<a href="https://tetiana2309.github.io/goit-markup-hw-07/">
 							<img src="images/img6.jpg" alt="computers" class="img-responsive">
 						</a>
 
@@ -363,30 +363,9 @@
 	<script src="js/main.js"></script>
 
 
-	<script>
-		function scrollToAnchor(anchor) {
-			var targetSection = document.querySelector(anchor);
-			if (targetSection) {
-				targetSection.scrollIntoView({ behavior: 'smooth' });
-			}
-		}
 
-		document.addEventListener('click', function (event) {
-			if (event.target.nodeName === 'A' && event.target.getAttribute('href').startsWith('#')) {
-				var anchor = event.target.getAttribute('href');
-				scrollToAnchor(anchor);
-				event.preventDefault();
-			}
-		});
 
-		window.addEventListener('beforeunload', function () {
-			window.location.hash = '';
-		});
 
-		window.addEventListener('load', function () {
-			scrollToAnchor('#fh5co-header');
-		});
-	</script>
 
 
 

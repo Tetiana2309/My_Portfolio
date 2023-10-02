@@ -364,34 +364,30 @@
 
 
 	<script>
-		// Функция для прокрутки к якорю с плавной анимацией
 		function scrollToAnchor(anchor) {
 			var targetSection = document.querySelector(anchor);
 			if (targetSection) {
-				// Прокручиваем к секции с плавной анимацией
 				targetSection.scrollIntoView({ behavior: 'smooth' });
 			}
 		}
 
-		// Обработчик события для клика по ссылкам
 		document.addEventListener('click', function (event) {
-			if (event.target.tagName === 'A' && event.target.getAttribute('href').startsWith('#')) {
-				// Получаем атрибут href ссылки (якорь) и вызываем функцию прокрутки
+			if (event.target.nodeName === 'A' && event.target.getAttribute('href').startsWith('#')) {
 				var anchor = event.target.getAttribute('href');
 				scrollToAnchor(anchor);
+				event.preventDefault();
 			}
 		});
 
-		// Добавьте код для перехода к секции хедера при обновлении страницы
 		window.addEventListener('beforeunload', function () {
 			window.location.hash = '';
 		});
 
-		// Добавьте код, который будет вызывать прокрутку к хедеру при загрузке страницы
 		window.addEventListener('load', function () {
 			scrollToAnchor('#fh5co-header');
 		});
 	</script>
+
 
 
 </body>
